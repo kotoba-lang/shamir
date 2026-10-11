@@ -1,0 +1,8 @@
+;; The kbb engine reads :deps from HERE, not from deps.edn. Same coordinates.
+{:paths ["src" "test"]
+ :deps {io.github.kotoba-lang/test {:git/url "https://github.com/kotoba-lang/test.git"
+                            :git/sha "c43aff05b24390b5ad0c8d22641538b41a6f6d9e"}
+        io.github.kotoba-lang/text {:git/url "https://github.com/kotoba-lang/text.git"
+                            :git/sha "6c6cd30d19c1a2304d6601966c71065feda5bb4a"}
+        io.github.kotoba-lang/error {:git/url "https://github.com/kotoba-lang/error.git"
+                             :git/sha "550755327b4d43eff757f80e824278e6fac7e8c6"}}}

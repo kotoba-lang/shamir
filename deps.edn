@@ -1,0 +1,16 @@
+;; shamir — portable .cljk; every dependency is first-party kotoba-lang.
+;; Sibling libraries of this project are :local/root until they are published;
+;; published ones are pinned by sha.
+{:paths ["src"]
+ :deps {io.github.kotoba-lang/test {:git/url "https://github.com/kotoba-lang/test.git"
+                            :git/sha "c43aff05b24390b5ad0c8d22641538b41a6f6d9e"}
+        io.github.kotoba-lang/text {:git/url "https://github.com/kotoba-lang/text.git"
+                            :git/sha "6c6cd30d19c1a2304d6601966c71065feda5bb4a"}
+        io.github.kotoba-lang/error {:git/url "https://github.com/kotoba-lang/error.git"
+                             :git/sha "550755327b4d43eff757f80e824278e6fac7e8c6"}}
+ :aliases
+ {:test {:extra-paths ["test"]
+         :extra-deps {io.github.cognitect-labs/test-runner
+                      {:git/tag "v0.5.1" :git/sha "dfb30dd6605cb6c0efc275e1df1736f6e90d4d73"}}
+         :main-opts ["-m" "cognitect.test-runner"]
+         :exec-fn cognitect.test-runner.api/test}}}
